@@ -1,14 +1,11 @@
 /*-- Global Styles --*/
-:root {
-  font-size: 18px;
-}
-* {
-  box-sizing: border-box;
-}
+:root {font-size: 18px;}
+* {box-sizing: border-box;}
 body, section, div, article, aside, h1, h2, h3, h4, h5, h6, p {
   margin: 0;
   padding: 0;
 }
+
 /*-- Document Styles --*/
 footer {
   background-color: #333;
@@ -23,16 +20,13 @@ nav {
   justify-content: space-between;
   padding: 1em;
 }
-nav a {
-  color: #DDD;
-}
+nav a {color: #DDD;}
 .slideshow {
   background-color: #CCC;
   height: 400px;
   width: 100%;
 }
 .thumb {
-  background-image: url("../img/tea.jpg");
   background-position: center center;
   background-size: cover;
   padding-bottom: 56%;
@@ -57,6 +51,15 @@ nav a {
 .card-content {
   padding: 1em;
 }
-.one .thumb {
-  background-image: url("../img/tea.jpg");
-}
+.one .thumb {background-image: url("../img/boywdog.jpg");}
+.two .thumb {background-image: url("../img/hogwarts.jpg");}
+.three .thumb {background-image: url("../img/darkocean.jpg");}
+.four .thumb {background-image: url("../img/desert.jpg");}
+.five .thumb {background-image: url("../img/h20.jpg");}
+.six .thumb {background-image: url("../img/girlonlake.jpg");}
+.seven .thumb {background-image: url("../img/howtotrainyourdragon.jpg");}
+.eight .thumb {background-image: url("../img/icetree.jpg");}
+.nine .thumb {background-image: url("../img/riverraveign.jpg");}
+.ten .thumb {background-image: url("../img/waterfallrainbow.jpg");}
+.eleven .thumb {background-image: url("../img/wavescrashing.jpg");}
+.twelve .thumb {background-image: url("../img/watertrickle.jfif");}
