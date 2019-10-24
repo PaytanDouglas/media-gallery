@@ -10,14 +10,45 @@
   </head>
   <body>
     <nav class="topnav" id="main-nav">
-      <a href="#" class="nav-links">Home</a>
+      <a href="#" class="nav-links">One</a>
       <a href="#" class="nav-links">Two</a>
       <a href="#" class="nav-links">Three</a>
       <a href="#" class="nav-links">Four</a>
       <a href="javascript:void(0);" class="nav-link trigram" onclick="navToggle()">&#9776;</a>
     </nav>
     <section class="slideshow">
-      <h1>Splash Text</h1>
+      <div class="slideshow-wrap">
+        <div class="slides fade">
+          <img src="https://picsum.photos/1280/448/?image=12" alt="slide one">
+          <p class="caption">Lorem ipsum dolot sit SLIDE ONE</p>
+        </div>
+
+        <div class="slides fade">
+          <img src="https://picsum.photos/1280/448/?image=13" alt="slide two">
+          <p class="caption">Lorem ipsum dolot sit SLIDE two</p>
+        </div>
+
+        <div class="slides fade">
+          <img src="https://picsum.photos/1280/448/?image=15" alt="slide three">
+          <p class="caption">Lorem ipsum dolot sit SLIDE three</p>
+        </div>
+
+        <div class="slides fade">
+          <img src="https://picsum.photos/1280/448/?image=17" alt="slide four">
+          <p class="caption">Lorem ipsum dolot sit SLIDE four</p>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+      </div>
+      <div class="dot-wrap">
+        <span class="dot" onclick="currentSlide(1)"><img src="https://picsum.photos/1280/448/?image=12" alt="slide one"></span>
+        <span class="dot" onclick="currentSlide(2)"><img src="https://picsum.photos/1280/448/?image=13" alt="slide two"></span>
+        <span class="dot" onclick="currentSlide(3)"><img src="https://picsum.photos/1280/448/?image=15" alt="slide three"></span>
+        <span class="dot" onclick="currentSlide(4)"><img src="https://picsum.photos/1280/448/?image=17" alt="slide four"></span>
+      </div>
+
     </section>
     <article class="grid-container">
       <div class="card one">
@@ -28,6 +59,18 @@
           <button class="more">More</button>
         </div><!--end .content-->
       </div><!--end .card -->
+      <div id="09" class="modal">
+  		  <div class="modal-content">
+  		    <span class="close">&times;</span>
+  				<div class="modal-body">
+            <img src="../img/cards/boywdog.jpg" alt="example" />
+  					<div class="eg-text">
+  						<h3>Man's Best Friend</h3>
+  						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  					</div>
+  				</div><!--end .modal-body-->
+  		  </div><!--end .modal-content-->
+  		</div><!--end .modal-->
       <div class="card two">
         <div class="thumb"></div><hr>
         <div class="card-content">
@@ -36,6 +79,18 @@
           <button class="more">More</button>
         </div><!--end .content-->
       </div><!--end .card -->
+      <div id="09" class="modal">
+  		  <div class="modal-content">
+  		    <span class="close">&times;</span>
+  				<div class="modal-body">
+            <img src="../img/cards/hogwatrs.jpg" alt="example" />
+  					<div class="eg-text">
+  						<h3>Castle on the Hill</h3>
+  						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  					</div>
+  				</div><!--end .modal-body-->
+  		  </div><!--end .modal-content-->
+  		</div><!--end .modal-->
       <div class="card three">
         <div class="thumb"></div><hr>
         <div class="card-content">
@@ -44,6 +99,18 @@
           <button class="more">More</button>
         </div><!--end .content-->
       </div><!--end .card -->
+      <div id="09" class="modal">
+  		  <div class="modal-content">
+  		    <span class="close">&times;</span>
+  				<div class="modal-body">
+            <img src="../img/cards/darkocean.jpg" alt="example" />
+  					<div class="eg-text">
+  						<h3>Stormy Night</h3>
+  						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  					</div>
+  				</div><!--end .modal-body-->
+  		  </div><!--end .modal-content-->
+  		</div><!--end .modal-->
       <div class="card four">
         <div class="thumb"></div><hr>
         <div class="card-content">
@@ -52,6 +119,18 @@
           <button class="more">More</button>
         </div><!--end .content-->
       </div><!--end .card -->
+      <div id="09" class="modal">
+  		  <div class="modal-content">
+  		    <span class="close">&times;</span>
+  				<div class="modal-body">
+            <img src="../img/cards/desert.jpg" alt="example" />
+  					<div class="eg-text">
+  						<h3>Red Sea</h3>
+  						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  					</div>
+  				</div><!--end .modal-body-->
+  		  </div><!--end .modal-content-->
+  		</div><!--end .modal-->
       <div class="card five">
         <div class="thumb"></div><hr>
         <div class="card-content">
@@ -60,6 +139,18 @@
           <button class="more">More</button>
         </div><!--end .content-->
       </div><!--end .card -->
+      <div id="09" class="modal">
+  		  <div class="modal-content">
+  		    <span class="close">&times;</span>
+  				<div class="modal-body">
+            <img src="../img/cards/h20.jpg" alt="example" />
+  					<div class="eg-text">
+  						<h3>Beaches, Beaches, Beaches!</h3>
+  						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  					</div>
+  				</div><!--end .modal-body-->
+  		  </div><!--end .modal-content-->
+  		</div><!--end .modal-->
       <div class="card six">
         <div class="thumb"></div><hr>
         <div class="card-content">
@@ -68,6 +159,18 @@
           <button class="more">More</button>
         </div><!--end .content-->
       </div><!--end .card -->
+      <div id="09" class="modal">
+  		  <div class="modal-content">
+  		    <span class="close">&times;</span>
+  				<div class="modal-body">
+            <img src="../img/cards/girlonlake.jpg" alt="example" />
+  					<div class="eg-text">
+  						<h3>First Date</h3>
+  						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  					</div>
+  				</div><!--end .modal-body-->
+  		  </div><!--end .modal-content-->
+  		</div><!--end .modal-->
       <div class="card seven">
         <div class="thumb"></div><hr>
         <div class="card-content">
@@ -76,6 +179,18 @@
           <button class="more">More</button>
         </div><!--end .content-->
       </div><!--end .card -->
+      <div id="09" class="modal">
+  		  <div class="modal-content">
+  		    <span class="close">&times;</span>
+  				<div class="modal-body">
+            <img src="../img/cards/howtotrainyourdragon.jpg" alt="example" />
+  					<div class="eg-text">
+  						<h3>But a Wee Trip</h3>
+  						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  					</div>
+  				</div><!--end .modal-body-->
+  		  </div><!--end .modal-content-->
+  		</div><!--end .modal-->
       <div class="card eight">
         <div class="thumb"></div><hr>
         <div class="card-content">
@@ -84,6 +199,18 @@
           <button class="more">More</button>
         </div><!--end .content-->
       </div><!--end .card -->
+      <div id="09" class="modal">
+  		  <div class="modal-content">
+  		    <span class="close">&times;</span>
+  				<div class="modal-body">
+            <img src="../img/cards/icetree.jpg" alt="example" />
+  					<div class="eg-text">
+  						<h3>Ice Tree</h3>
+  						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  					</div>
+  				</div><!--end .modal-body-->
+  		  </div><!--end .modal-content-->
+  		</div><!--end .modal-->
       <div class="card nine">
         <div class="thumb"></div><hr>
         <div class="card-content">
@@ -92,6 +219,18 @@
           <button class="more">More</button>
         </div><!--end .content-->
       </div><!--end .card -->
+      <div id="09" class="modal">
+  		  <div class="modal-content">
+  		    <span class="close">&times;</span>
+  				<div class="modal-body">
+            <img src="../img/cards/riverraveign.jpg" alt="example" />
+  					<div class="eg-text">
+  						<h3>Far As the Eye Can See</h3>
+  						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  					</div>
+  				</div><!--end .modal-body-->
+  		  </div><!--end .modal-content-->
+  		</div><!--end .modal-->
       <div class="card ten">
         <div class="thumb"></div><hr>
         <div class="card-content">
@@ -100,6 +239,18 @@
           <button class="more">More</button>
         </div><!--end .content-->
       </div><!--end .card -->
+      <div id="09" class="modal">
+  		  <div class="modal-content">
+  		    <span class="close">&times;</span>
+  				<div class="modal-body">
+            <img src="../img/cards/waterfallrainbow.jpg" alt="example" />
+  					<div class="eg-text">
+  						<h3>Hidden Valley</h3>
+  						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  					</div>
+  				</div><!--end .modal-body-->
+  		  </div><!--end .modal-content-->
+  		</div><!--end .modal-->
       <div class="card eleven">
         <div class="thumb"></div><hr>
         <div class="card-content">
@@ -108,6 +259,18 @@
           <button class="more">More</button>
         </div><!--end .content-->
       </div><!--end .card -->
+      <div id="09" class="modal">
+  		  <div class="modal-content">
+  		    <span class="close">&times;</span>
+  				<div class="modal-body">
+            <img src="../img/cards/wavescrashing.jpg" alt="example" />
+  					<div class="eg-text">
+  						<h3>Calmly Crashing</h3>
+  						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  					</div>
+  				</div><!--end .modal-body-->
+  		  </div><!--end .modal-content-->
+  		</div><!--end .modal-->
       <div class="card twelve">
         <div class="thumb"></div><hr>
         <div class="card-content">
@@ -116,6 +279,18 @@
           <button class="more">More</button>
         </div><!--end .content-->
       </div><!--end .card -->
+      <div id="09" class="modal">
+  		  <div class="modal-content">
+  		    <span class="close">&times;</span>
+  				<div class="modal-body">
+            <img src="../img/cards/watertrickle.jfif" alt="example" />
+  					<div class="eg-text">
+  						<h3>Just a Trickle</h3>
+  						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  					</div>
+  				</div><!--end .modal-body-->
+  		  </div><!--end .modal-content-->
+  		</div><!--end .modal-->
     </article>
     <footer>
       <p>&copy; 2019 Paytan Douglas</p>

@@ -1,5 +1,12 @@
 /*-- Global Styles --*/
 :root {font-size: 18px;}
+:root {
+  --darkpink: #FF5EA3;
+  --pinkpurp: #E856DD;
+  --lightpurp: #DD6AFF;
+  --darkpurp: #9E56E8;
+  --purepurp: #825EFF;
+}
 * {box-sizing: border-box;}
 body, section, div, article, aside, h1, h2, h3, h4, h5, h6, p {
   margin: 0;
@@ -21,7 +28,6 @@ nav {
   justify-content: space-between;
   padding: 1em;
 }
-
 @media screen and (min-width: 768px) {
   nav {flex-direction: row;}
 }
@@ -43,11 +49,38 @@ nav a {
   .topnav.responsive a.trigram {visibility: hidden; position: absolute; right: 3%; top: 2%;}
   .topnav.responsive a.trigram::after {content:'\000D7'; visibility:visible; text-indent: -.5em;}
 }
+/*--slideshow rules--*/
 .slideshow {
-  background-color: #CCC;
-  height: 400px;
+  margin-bottom: 1em;
+  padding: 1em;
   width: 100%;
 }
+.slideshow img {width: 100%;}
+.slideshow-wrap {
+  margin: auto;
+  max-width: 1440px;
+  position: relative;
+}
+.prev, .next {
+  color: #DDD;
+  position: absolute;
+  top: 50%;
+  width: auto;
+}
+.next {right: 0;}
+.prev:hover, .next:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+.dot {
+  background: #BBB;
+  border-radius: 50%;
+  display: inline-block;
+  width: 20%;
+}
+.dot-wrap {text-align: center;}
+.dot img {width: 100%;}
+.dot.active {background: #333;}
+
 .thumb {
   background-position: center center;
   background-size: cover;
@@ -67,12 +100,99 @@ nav a {
 @media screen and (min-width: 990px) {
   .grid-container {grid-template-columns: repeat(4, 1fr);}
 }
-.card {
-  border: 1px solid #333;
-}
+.card {border: 1px solid #333;}
 .card-content {
+  /*padding: 0 .5em .7em .5em;*/
+  align-items: center;
+  display: flex;
+  flex-direction: column;
   padding: 1em;
 }
+.card-title {
+  align-self: flex-start;
+  color: var(--pinkpurp);
+/*  margin: 1rem 0 0 0;*/
+}
+.card-text {
+  font-size: .80em;
+  line-height: 1.2;
+  align-self: flex-start;
+  color: var(--pinkpurp);
+}
+.card-content {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 0 .5em .7em .5em;
+}
+.card-title {
+  align-self: flex-start;
+  color: var(--pinkpurp);
+  margin: 1rem 0 0 0;
+  text-transform: uppercase;/*all caps*/
+}
+.card-text {
+  font-size: .80em;
+  line-height: 1.2;
+  align-self: flex-start;
+  color: var(--pinkpurp);
+}
+button.card-more {
+  background: transparent;
+  border-radius: 200px;
+  cursor: pointer;
+  font-size: .7em;
+  padding: .45em .7em .4em .7em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+button.card-more, button.card-more:visited {
+  border: 1.5px solid var(--darkpink);
+  color: var(--darkpink);
+  transition: all 250ms ease-in-out;
+}
+button.card-more:hover, button.card-more:active {
+  border-color: var(--darkpurp);
+  color: var(--darkpurp);
+}
+
+/*--slideshow rules--*/
+.slideshow {
+  margin-bottom: 1em;
+  padding: 1em;
+  width: 100%;
+}
+.slideshow img {
+  width: 100%;
+}
+.slideshow-wrap {
+  margin: auto;
+  max-width: 1440px;
+  position: relative;
+}
+.prev, .next {
+  color: #DDD;
+  position: absolute;
+  top: 50%;
+  width: auto;
+}
+.next {
+  right: 0;
+}
+.prev:hover, .next:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+.dot-wrap {
+  text-align: center;
+}
+.dot {
+  background: #BBB;
+  border-radius: 50%;
+  display: inline-block;
+  width: 20%;
+}
+.dot img {width: 100%;}
+.dot.active {background: #333;}
 .one .thumb {background-image: url("../img/cards/boywdog.jpg");}
 .two .thumb {background-image: url("../img/cards/hogwarts.jpg");}
 .three .thumb {background-image: url("../img/cards/darkocean.jpg");}
@@ -85,3 +205,63 @@ nav a {
 .ten .thumb {background-image: url("../img/cards/waterfallrainbow.jpg");}
 .eleven .thumb {background-image: url("../img/cards/wavescrashing.jpg");}
 .twelve .thumb {background-image: url("../img/cards/watertrickle.jfif");}
+
+.modal {
+  background-color: rgba(10, 10, 10, .4);
+  display: none;
+  height: 100%;
+  left: 0;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1100; /*-- sets higher than anything else so modal is in the very front --*/
+}
+.modal-content {
+  animation: fadein .3s ease-in-out; /*-- sets animation properties: name, duration, easing --*/
+  background-color: var(--purepurp);
+  border-radius: 4px;
+  color: var(--pinkpurp);
+  margin: 1rem auto;
+  padding: 1em;
+  width: 92%;
+}
+@keyframes fadein {
+  from{transform:scale(.1);}
+}
+.close {
+  color: var(--pinkpurp);
+  font-size: 2.5em;
+  font-weight: bold;
+  position: absolute;
+  right: 4.25%;
+  text-shadow: 2px 2px 5px #FAFAFA,
+             -2px -2px 5px #FAFAFA,
+              2px -2px 5px #FAFAFA,
+              -2px 2px 5px #FAFAFA;
+  top: 5px;
+  transition: all .2s ease-in;
+}
+.close:hover, .close:focus {
+   color: var(--darkpurp);
+   cursor: pointer;
+   text-decoration: none;
+}
+.modal-body {
+  display: grid;
+  grid-gap: 2em;
+  grid-template-columns: 1fr; /*-- default modal grid (for mobile screens)--*/
+}
+.eg-text {align-self: center;}
+.eg-text h3 {
+  margin-top: 0;
+  padding-top: 0;
+}
+.modal-body img {
+  height: auto;
+  margin-bottom: 1.5em;
+  width: 100%;
+}
+@media screen and (min-width: 1280px) {
+  .modal-body {grid-template-columns: 7fr 5fr;}
+}
