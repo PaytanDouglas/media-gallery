@@ -35,15 +35,112 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
+//Button 1
+var modal = document.buttongetElementById("1");
+var btn = document.getElementById("button1");
+var span = document.getElementsByClassName("close")[0];
+btn.onclick = function() {modal.style.display = "block";}
+span.onclick = function() {modal.style.display = "none";}
+window.onclick = function(event) {
+  if (event.target == modal) {modal.style.display = "none";}
+}
 
-// Image modal functions
-$(".button").on("click", function() { // when item with class of button is clicked, fire function
-  var modal = $(this).data("modal"); // sets modal var equal to data attribute
-  $(modal).show(); // opens up modal (much code hidden here by jQuery)
-});
-$(".modal").on("click", function(e) { // sets up click function
-  var className = e.target.className; // var className set to event target
-  if(className === "modal" || className === "close"){ // if conditions are met...
-    $(this).closest(".modal").hide(); // then hide the modal
-  } // closes if-statement
-}); // closes function
+//Button 2
+var modal = document.buttongetElementById("2");
+var btn = document.getElementById("button2");
+var span = document.getElementsByClassName("close")[0];
+btn.onclick = function() {modal.style.display = "block";}
+span.onclick = function() {modal.style.display = "none";}
+window.onclick = function(event) {
+  if (event.target == modal) {modal.style.display = "none";}
+}
+//Button 3
+var modal = document.buttongetElementById("3");
+var btn = document.getElementById("button3");
+var span = document.getElementsByClassName("close")[0];
+btn.onclick = function() {modal.style.display = "block";}
+span.onclick = function() {modal.style.display = "none";}
+window.onclick = function(event) {
+  if (event.target == modal) {modal.style.display = "none";}
+}
+//Button 4
+var modal = document.buttongetElementById("4");
+var btn = document.getElementById("button4");
+var span = document.getElementsByClassName("close")[0];
+btn.onclick = function() {modal.style.display = "block";}
+span.onclick = function() {modal.style.display = "none";}
+window.onclick = function(event) {
+  if (event.target == modal) {modal.style.display = "none";}
+}
+//Button 5
+var modal = document.buttongetElementById("5");
+var btn = document.getElementById("button5");
+var span = document.getElementsByClassName("close")[0];
+btn.onclick = function() {modal.style.display = "block";}
+span.onclick = function() {modal.style.display = "none";}
+window.onclick = function(event) {
+  if (event.target == modal) {modal.style.display = "none";}
+}
+//Button 6
+var modal = document.buttongetElementById("6");
+var btn = document.getElementById("button6");
+var span = document.getElementsByClassName("close")[0];
+btn.onclick = function() {modal.style.display = "block";}
+span.onclick = function() {modal.style.display = "none";}
+window.onclick = function(event) {
+  if (event.target == modal) {modal.style.display = "none";}
+}
+//Button 7
+var modal = document.buttongetElementById("7");
+var btn = document.getElementById("button7");
+var span = document.getElementsByClassName("close")[0];
+btn.onclick = function() {modal.style.display = "block";}
+span.onclick = function() {modal.style.display = "none";}
+window.onclick = function(event) {
+  if (event.target == modal) {modal.style.display = "none";}
+}
+//Button 8
+var modal = document.buttongetElementById("8");
+var btn = document.getElementById("button8");
+var span = document.getElementsByClassName("close")[0];
+btn.onclick = function() {modal.style.display = "block";}
+span.onclick = function() {modal.style.display = "none";}
+window.onclick = function(event) {
+  if (event.target == modal) {modal.style.display = "none";}
+}
+//Button 9
+var modal = document.buttongetElementById("9");
+var btn = document.getElementById("button9");
+var span = document.getElementsByClassName("close")[0];
+btn.onclick = function() {modal.style.display = "block";}
+span.onclick = function() {modal.style.display = "none";}
+window.onclick = function(event) {
+  if (event.target == modal) {modal.style.display = "none";}
+}
+//Button 10
+var modal = document.buttongetElementById("10");
+var btn = document.getElementById("button10");
+var span = document.getElementsByClassName("close")[0];
+btn.onclick = function() {modal.style.display = "block";}
+span.onclick = function() {modal.style.display = "none";}
+window.onclick = function(event) {
+  if (event.target == modal) {modal.style.display = "none";}
+}
+//Button 11
+var modal = document.buttongetElementById("11");
+var btn = document.getElementById("button11");
+var span = document.getElementsByClassName("close")[0];
+btn.onclick = function() {modal.style.display = "block";}
+span.onclick = function() {modal.style.display = "none";}
+window.onclick = function(event) {
+  if (event.target == modal) {modal.style.display = "none";}
+}
+//Button 12
+var modal = document.buttongetElementById("12");
+var btn = document.getElementById("button12");
+var span = document.getElementsByClassName("close")[0];
+btn.onclick = function() {modal.style.display = "block";}
+span.onclick = function() {modal.style.display = "none";}
+window.onclick = function(event) {
+  if (event.target == modal) {modal.style.display = "none";}
+}
