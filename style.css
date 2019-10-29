@@ -1,0 +1,302 @@
+:root {
+  --aero: #C2FFDF;
+  --blackolive: #3E3D32;
+  --canary: #F8FF9C;
+  --cottoncandy: #FFB8D1;
+  --electricblue: #83FFFC;
+  --independence: #5A5475;
+  --lavender: #AE81FF;
+  --transparent: rgba(0,0,0,0.5);
+  --whitesmoke: #F8F8F2;
+}
+body {
+  background-color: var(--lavender);
+  color: var(--blackolive);
+  font-size: 18px;
+  padding: .25rem;
+}
+i.fas {padding: 0 .3em;}
+
+
+
+/* Nav */
+.topnav {
+  align-content: center;
+  align-items: stretch;
+  background-color: var(--independence);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-top: -.25rem;
+  padding-bottom: .5rem;
+  position: fixed; /*-- makes the navbar stay at the top, even when scrolling--*/
+  width: 100%;
+  z-index: 1000; /*-- makes navbar always sit on top--*/
+}
+a.nav-item {
+  color: var(--aero);
+  margin: auto;
+  padding: 1em;
+  position: relative;
+  text-align: center;
+  top: 4px;
+  transition: color 250ms ease-in-out;
+}
+a.nav-item:hover {
+  color: var(--canary);
+  cursor: pointer;
+}
+.label {font-size: 1rem;}
+.nav-item.trigram {
+  display: none;
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+/* Nav for Small Screens */
+@media screen and (max-width: 767px) {
+  .topnav a, .topnav span {display: none;}
+  .topnav a.trigram {
+    background: var(--independence);
+    display: inherit;
+    font-size: 2em;
+    padding: .25em;
+    position: absolute;
+    right: 4%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .topnav.responsive {align-items: center;}
+  .topnav.responsive a, .topnav.responsive span {display:inherit;}
+  .topnav.responsive a:first-child {margin-top:1em;} /*-- adds space above first item --*/
+  .topnav.responsive a:not(:last-child) {display:inherit; padding-top:1em;} /*-- makes items visible (but not the trigram) and adds space above them--*/
+  .topnav.responsive a.more {margin-bottom: 1em;} /*-- adds margin below bottom item --*/
+  .topnav.responsive a.trigram {visibility:hidden; transition:none;} /*-- hides trigram when open --*/
+  .topnav.responsive a.trigram:after {content:'\000D7'; visibility:visible; text-indent: -.5em;} /*-- replaces trigram sign with x-sign on mobile. --*/
+}
+@media screen and (min-width: 768px) {
+  .topnav {display: flex; flex-direction: row; justify-content: space-around;}
+}
+
+
+
+/* Slideshow */
+.slideshow {
+  background-color: var(--cottoncandy);
+  padding: 1em;
+}
+.slideshow-wrap {
+  position: relative;
+  margin: auto 2em 0 0;
+  max-width: 1440px;
+}
+.slideshow-wrap img {width: 100%;}
+.prev, .next {
+  border-radius: 0 3px 3px 0; /*-- slightly rounds inside borders --*/
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: -22px; /*-- adjusts position by height of arrows --*/
+  padding: 16px;
+  position: absolute;
+  top: 50%; /*-- positions arrows half the height of parent from top --*/
+  transition: 0.3s ease;
+  user-select: none; /*-- prevents users from selecting buttons --*/
+  width: auto;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+.next {
+  border-radius: 3px 0 0 3px;
+  right: 0;
+}
+.prev:hover, .next:hover {background-color: var(--transparent);}
+.text-center {text-align: center;}
+.captiontext {
+  background: var(--transparent);
+  bottom: 8px; /*-- sets position 8px from bottom --*/
+  color: #f2f2f2;
+  font-size: 22px;
+  padding: 8px 12px; /*-- sets caption padding --*/
+  position: absolute; /*-- positions caption text absolutely--*/
+  text-align: center;
+  width: 100%;
+}
+.dot {
+  cursor:pointer;
+  display: inline-block;
+  height: auto;
+  margin: 0 2px;
+  opacity: .5;
+  transition: all 100ms ease-in-out;
+  width: 20%;
+}
+.dot img {width: 100% !important;}
+.active, .dot:hover {opacity: 1;}
+
+
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade; /*-- webkit prefix  --*/
+  -webkit-animation-duration: 1.5s; /*-- webkit prefix --*/
+  animation-name: fade; /*-- defines which animation to use --*/
+  animation-duration: 1.5s; /*-- sets the duration --*/
+}
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+@keyframes fade { /*-- sets "fade" animation properties --*/
+  from {opacity: .4} /*-- sets start of animation --*/
+  to {opacity: 1} /*-- sets end of animation --*/
+}
+@media only screen and (max-width: 767px) {.slideshow {display: none;}}
+
+
+
+/* Grid */
+.grid-container {
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: 1fr;
+  margin-top: 2rem;
+  padding: 1rem;
+}
+
+/* Grid for Small Screens */
+@media screen and (min-width: 550px) {.grid-container {grid-template-columns: repeat(2, 1fr);}}
+@media screen and (min-width: 768px) {.grid-container {grid-template-columns: repeat(3, 1fr);}}
+@media screen and (min-width: 990px) {.grid-container {grid-template-columns: repeat(4, 1fr);}}
+@media screen and (min-width: 1280px) {.grid-container {grid-template-columns: repeat(4, 1fr);}}
+
+
+
+/* Cards */
+.card {
+  background-color: var(--aero);
+  border-radius: 4px;
+  padding: .5em;
+}
+.thumb {
+  background-position: center center;
+  background-size: cover;
+  border-radius: 4px;
+  padding-bottom: 56%; /*-- creates ~16:9 ratio--*/
+}
+.one .thumb {background-image: url("img2/cards/used/boywdog.jpg");}
+.two .thumb {background-image: url("img2/cards/used/hogwarts.jpg");}
+.three .thumb {background-image: url("img2/cards/used/darkocean.jpg");}
+.four .thumb {background-image: url("img2/cards/used/desert.jpg");}
+.five .thumb {background-image: url("img2/cards/used/h20.jpg");}
+.six .thumb {background-image: url("img2/cards/used/girlonlake.jpg");}
+.seven .thumb {background-image: url("img2/cards/used/howtotrainyourdragon.jpg");}
+.eight .thumb {background-image: url("img2/cards/used/icetree.jpg");}
+.nine .thumb {background-image: url("img2/cards/used/riverraveign.jpg");}
+.ten .thumb {background-image: url("img2/cards/used/waterfallrainbow.jpg");}
+.eleven .thumb {background-image: url("img2/cards/used/wavescrashing.jpg");}
+.twelve .thumb {background-image: url("img2/cards/used/watertrickle.jfif");}
+
+.card-content {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 0 .5em .7em;
+}
+.card-title {
+  align-self: flex-start;
+  color: var(--independence);
+  margin: 1rem 0 0;
+}
+.card-text {
+  align-self: flex-start;
+  color: var(--independence);
+  font-size: .75em;
+  line-height: 1.2;
+}
+button.card-more {
+  background: var(--independence);
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: .7em;
+  font-weight: bold;
+  padding: .45em .7em;
+  text-decoration: none;
+}
+button.card-more, button.card-more:visited {
+  border: 1.5px solid var(--blackolive);
+  color: var(--canary);
+  transition: all 50ms ease-in-out;
+}
+button.card-more:hover, button.card-more:active {
+  border-color: var(--electricblue);
+  color: var(--electricblue);
+}
+
+
+
+/* Modal */
+.modal {
+  background-color: rgba(10, 10, 10, .4);
+  display: none;
+  left: 0;
+  height: 100%;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1100;
+}
+.modal-content {
+  background-color: var(--cottoncandy);
+  color: var(--independence);
+  margin: 1rem auto;
+  padding: 1em;
+  width: 75%;
+}
+@keyframes fadein {from{transform:scale(.1);} /* modal grows from small to full size */}
+.close {
+   color: var(--independence);
+   font-size: 3em;
+   font-weight: bold;
+   position: absolute;
+   top: 5px;
+   right: 15%;
+   transition: all .2s ease-in;
+   text-shadow: 2px 2px 2px var(--whitesmoke),
+               -2px -2px 2px var(--whitesmoke),
+               2px -2px 2px var(--whitesmoke),
+               -2px 2px 2px var(--whitesmoke);
+}
+.close:hover, .close:focus {
+   color: var(--electricblue);
+   text-decoration: none;
+   cursor: pointer;
+   text-shadow: 2px 2px 2px var(--blackolive),
+               -2px -2px 2px var(--blackolive),
+               2px -2px 2px var(--blackolive),
+               -2px 2px 2px var(--blackolive);
+}
+.modal-body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2em;
+}
+.eg-text {align-self: center;}
+.modal-body img {
+  width: 100%;
+  height: auto;
+}
+@media screen and (min-width: 1280px) {.modal-body {grid-template-columns: 7fr 5fr;}}
+
+
+/* Footer */
+footer {
+  background-color: var(--independence);
+  padding: .25rem;
+  color: var(--canary);
+  text-align: center;
+  font-weight: bold;
+}

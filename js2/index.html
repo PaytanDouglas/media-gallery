@@ -1,0 +1,300 @@
+<p class="card-text"><!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta https-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Media Gallery</title>
+    <link rel="stylesheet" href="css/sanitize.css"><!-- cross-browser compatibility -->
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <nav class="topnav" id="main-nav">
+      <a href="#" class="nav-links">One</a>
+      <a href="#" class="nav-links">Two</a>
+      <a href="#" class="nav-links">Three</a>
+      <a href="#" class="nav-links">Four</a>
+      <a href="javascript:void(0);" class="nav-link trigram" onclick="navToggle()">&#9776;</a>
+    </nav>
+    <section class="slideshow">
+      <div class="slideshow-wrap">
+        <div class="slides fade">
+          <img src="https://picsum.photos/1280/448/?image=12" alt="slide one">
+          <p class="caption">Lorem ipsum dolot sit SLIDE ONE</p>
+        </div>
+
+        <div class="slides fade">
+          <img src="https://picsum.photos/1280/448/?image=13" alt="slide two">
+          <p class="caption">Lorem ipsum dolot sit SLIDE two</p>
+        </div>
+
+        <div class="slides fade">
+          <img src="https://picsum.photos/1280/448/?image=15" alt="slide three">
+          <p class="caption">Lorem ipsum dolot sit SLIDE three</p>
+        </div>
+
+        <div class="slides fade">
+          <img src="https://picsum.photos/1280/448/?image=17" alt="slide four">
+          <p class="caption">Lorem ipsum dolot sit SLIDE four</p>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+      </div>
+      <div class="dot-wrap">
+        <span class="dot" onclick="currentSlide(1)"><img src="https://picsum.photos/1280/448/?image=12" alt="slide one"></span>
+        <span class="dot" onclick="currentSlide(2)"><img src="https://picsum.photos/1280/448/?image=13" alt="slide two"></span>
+        <span class="dot" onclick="currentSlide(3)"><img src="https://picsum.photos/1280/448/?image=15" alt="slide three"></span>
+        <span class="dot" onclick="currentSlide(4)"><img src="https://picsum.photos/1280/448/?image=17" alt="slide four"></span>
+      </div>
+
+    </section>
+    <article class="grid-container">
+      <div class="card one">
+        <div class="thumb"></div><hr>
+        <div class="card-content">
+          <h3 class="card-title">Man's Best Friend</h3>
+          <p class="card-text">Looking for a little guy to stand by your side no matter what, without the commitment of children? Good! Dogs are a man's best friend after all.</p>
+          <button id="button1">More</button>
+        </div><!--end .content-->
+      </div><!--end .card -->
+      <div id="1" class="modal">
+  		  <div class="modal-content">
+  		    <span class="close">&times;</span>
+  				<div class="modal-body">
+            <img src="../img/cards/boywdog.jpg" alt="example" />
+  					<div class="eg-text">
+  						<h3>Man's Best Friend</h3>
+  						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  					</div>
+  				</div><!--end .modal-body-->
+  		  </div><!--end .modal-content-->
+  		</div><!--end .modal-->
+      <div class="card two">
+        <div class="thumb"></div><hr>
+        <div class="card-content">
+          <h3 class="card-title">Castle on the Hill</h3>
+          <p class="card-text">Looking for a place to stay? Want something less motel-y and more Hogwarts? Well congrats, because you'll find everything you're looking for here.</p>
+          <button id="button2">More</button>
+        </div><!--end .content-->
+      </div><!--end .card -->
+      <div id="2" class="modal">
+  		  <div class="modal-content">
+  		    <span class="close">&times;</span>
+  				<div class="modal-body">
+            <img src="../img/cards/hogwatrs.jpg" alt="example" />
+  					<div class="eg-text">
+  						<h3>Castle on the Hill</h3>
+  						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  					</div>
+  				</div><!--end .modal-body-->
+  		  </div><!--end .modal-content-->
+  		</div><!--end .modal-->
+      <div class="card three">
+        <div class="thumb"></div><hr>
+        <div class="card-content">
+          <h3 class="card-title">Stormy Night</h3>
+          <p class="card-text">Worried about the weather ruining your trip? No worries. When you explore nature at its most pure, storms aren't so bad. You may even come to like them, like I do.</p>
+          <button id="button3">More</button>
+        </div><!--end .content-->
+      </div><!--end .card -->
+      <div id="3" class="modal">
+  		  <div class="modal-content">
+  		    <span class="close">&times;</span>
+  				<div class="modal-body">
+            <img src="../img/cards/darkocean.jpg" alt="example" />
+  					<div class="eg-text">
+  						<h3>Stormy Night</h3>
+  						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  					</div>
+  				</div><!--end .modal-body-->
+  		  </div><!--end .modal-content-->
+  		</div><!--end .modal-->
+      <div class="card four">
+        <div class="thumb"></div><hr>
+        <div class="card-content">
+          <h3 class="card-title">Red Sea</h3>
+          <p class="card-text">Who knew deserts could be so fun? Oh, right, I did. At this grand tour of the desert you'll ride a camel into the sunset, since that's really the only way to travel, isn't it?</p>
+          <button id="button4">More</button>
+        </div><!--end .content-->
+      </div><!--end .card -->
+      <div id="4" class="modal">
+  		  <div class="modal-content">
+  		    <span class="close">&times;</span>
+  				<div class="modal-body">
+            <img src="../img/cards/desert.jpg" alt="example" />
+  					<div class="eg-text">
+  						<h3>Red Sea</h3>
+  						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  					</div>
+  				</div><!--end .modal-body-->
+  		  </div><!--end .modal-content-->
+  		</div><!--end .modal-->
+      <div class="card five">
+        <div class="thumb"></div><hr>
+        <div class="card-content">
+          <h3 class="card-title">Beaches, Beaches, Beaches!</h3>
+          <p class="card-text">Beaches are the favorite hang-out for people of all ages. It's no wonder why directors add beach scenes! Make sure to stop by one of the top 100 beaches to visit the next time you dream of the sand between your toes and water to keep cool.</p>
+          <button id="button5">More</button>
+        </div><!--end .content-->
+      </div><!--end .card -->
+      <div id="5" class="modal">
+  		  <div class="modal-content">
+  		    <span class="close">&times;</span>
+  				<div class="modal-body">
+            <img src="../img/cards/h20.jpg" alt="example" />
+  					<div class="eg-text">
+  						<h3>Beaches, Beaches, Beaches!</h3>
+  						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  					</div>
+  				</div><!--end .modal-body-->
+  		  </div><!--end .modal-content-->
+  		</div><!--end .modal-->
+      <div class="card six">
+        <div class="thumb"></div><hr>
+        <div class="card-content">
+          <h3 class="card-title">First Date</h3>
+          <p class="card-text">First date jitters? No worries, we all get them. If you're looking for the place to go, romantic nature getaways are the way to think. What girl wouldn't want to peruse something as beautiful as a lake?</p>
+          <button id="button6">More</button>
+        </div><!--end .content-->
+      </div><!--end .card -->
+      <div id="6" class="modal">
+  		  <div class="modal-content">
+  		    <span class="close">&times;</span>
+  				<div class="modal-body">
+            <img src="../img/cards/girlonlake.jpg" alt="example" />
+  					<div class="eg-text">
+  						<h3>First Date</h3>
+  						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  					</div>
+  				</div><!--end .modal-body-->
+  		  </div><!--end .modal-content-->
+  		</div><!--end .modal-->
+      <div class="card seven">
+        <div class="thumb"></div><hr>
+        <div class="card-content">
+          <h3 class="card-title">But a Wee Trip</h3>
+          <p class="card-text">Always wanted to travel but didn't know where? Stop searching, because Ireland has something for everyone. Most prominent is their large rocks and larger oceanside. Book the next flight to Europe and enjoy the peaceful serenity that is Ireland.</p>
+          <button id="button7">More</button>
+        </div><!--end .content-->
+      </div><!--end .card -->
+      <div id="7" class="modal">
+  		  <div class="modal-content">
+  		    <span class="close">&times;</span>
+  				<div class="modal-body">
+            <img src="../img/cards/howtotrainyourdragon.jpg" alt="example" />
+  					<div class="eg-text">
+  						<h3>But a Wee Trip</h3>
+  						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  					</div>
+  				</div><!--end .modal-body-->
+  		  </div><!--end .modal-content-->
+  		</div><!--end .modal-->
+      <div class="card eight">
+        <div class="thumb"></div><hr>
+        <div class="card-content">
+          <h3 class="card-title">Ice Tree</h3>
+          <p class="card-text">Winter truly is beautiful. The trees don't mind the cold, so why should you? Next time you're thinking of sipping cocoa by the fire, put the mug down and pick up a camera. These icicles won't stay forever!</p>
+          <button id="button8">More</button>
+        </div><!--end .content-->
+      </div><!--end .card -->
+      <div id="8" class="modal">
+  		  <div class="modal-content">
+  		    <span class="close">&times;</span>
+  				<div class="modal-body">
+            <img src="../img/cards/icetree.jpg" alt="example" />
+  					<div class="eg-text">
+  						<h3>Ice Tree</h3>
+  						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  					</div>
+  				</div><!--end .modal-body-->
+  		  </div><!--end .modal-content-->
+  		</div><!--end .modal-->
+      <div class="card nine">
+        <div class="thumb"></div><hr>
+        <div class="card-content">
+          <h3 class="card-title">Far As the Eye Can See</h3>
+          <p class="card-text">Rivers and mountains and rocks, oh my! Long stretches of river while appreciating the mountainside is an activity <em>everyone</em> should partake in.</p>
+          <button id="button9">More</button>
+        </div><!--end .content-->
+      </div><!--end .card -->
+      <div id="9" class="modal">
+  		  <div class="modal-content">
+  		    <span class="close">&times;</span>
+  				<div class="modal-body">
+            <img src="../img/cards/riverraveign.jpg" alt="example" />
+  					<div class="eg-text">
+  						<h3>Far As the Eye Can See</h3>
+  						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  					</div>
+  				</div><!--end .modal-body-->
+  		  </div><!--end .modal-content-->
+  		</div><!--end .modal-->
+      <div class="card ten">
+        <div class="thumb"></div><hr>
+        <div class="card-content">
+          <h3 class="card-title">Hidden Waterfall</h3>
+          <p class="card-text">You never know what you might find tucked away from humanity. A never-ending waterfall taller than Empire State is something everyone should see - at least once in their lifetime.</p>
+          <button id="button10">More</button>
+        </div><!--end .content-->
+      </div><!--end .card -->
+      <div id="10" class="modal">
+  		  <div class="modal-content">
+  		    <span class="close">&times;</span>
+  				<div class="modal-body">
+            <img src="../img/cards/waterfallrainbow.jpg" alt="example" />
+  					<div class="eg-text">
+  						<h3>Hidden Valley</h3>
+  						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  					</div>
+  				</div><!--end .modal-body-->
+  		  </div><!--end .modal-content-->
+  		</div><!--end .modal-->
+      <div class="card eleven">
+        <div class="thumb"></div><hr>
+        <div class="card-content">
+          <h3 class="card-title">Calmly Crashing</h3>
+          <p class="card-text">Australia is the place to be. Combining the cool relaxing feeling of beaches while still having the excitement of danger, Australia takes nature to a whole new level.</p>
+          <button id="button11">More</button>
+        </div><!--end .content-->
+      </div><!--end .card -->
+      <div id="11" class="modal">
+  		  <div class="modal-content">
+  		    <span class="close">&times;</span>
+  				<div class="modal-body">
+            <img src="../img/cards/wavescrashing.jpg" alt="example" />
+  					<div class="eg-text">
+  						<h3>Calmly Crashing</h3>
+  						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  					</div>
+  				</div><!--end .modal-body-->
+  		  </div><!--end .modal-content-->
+  		</div><!--end .modal-->
+      <div class="card twelve">
+        <div class="thumb"></div><hr>
+        <div class="card-content">
+          <h3 class="card-title">Just a Trickle</h3>
+          <p class="card-text">The U.S. houses some of the most beautiful nature adventures in the world. Just as Arizona. You wouldn't suspect them to have once-in-a-lifetime sights, but boy do they ever.</p>
+          <button id="button12">More</button>
+        </div><!--end .content-->
+      </div><!--end .card -->
+      <div id="12" class="modal">
+  		  <div class="modal-content">
+  		    <span class="close">&times;</span>
+  				<div class="modal-body">
+            <img src="../img/cards/watertrickle.jfif" alt="example" />
+  					<div class="eg-text">
+  						<h3>Just a Trickle</h3>
+  						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  					</div>
+  				</div><!--end .modal-body-->
+  		  </div><!--end .modal-content-->
+  		</div><!--end .modal-->
+    </article>
+    <footer>
+      <p>&copy; 2019 Paytan Douglas</p>
+    </footer>
+    <script src="js/page.js"></script>              <!-- closing script calls -->
+  </body>
+</html>
