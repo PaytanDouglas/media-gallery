@@ -4,63 +4,55 @@
     <meta charset="utf-8">
     <meta https-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>eg_media_gallery</title>
+    <title>Nature Media Gallery</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"><!-- font awesome CDN -->
-    <link rel="stylesheet" href="sanitize.css"><!-- cross-browser compatibility -->
-    <link rel="stylesheet" href="style.css"><!-- our stylesheet -->
+    <link rel="stylesheet" href="css/sanitize.css"><!-- cross-browser compatibility -->
+    <link rel="stylesheet" href="css/style.css"><!-- our stylesheet -->
   </head>
   <body>
     <nav id="main-nav" class="topnav">
-      <a class="nav-item logo">
-        <span class="label"><i class="fas fa-home"></i>Home</span>
-      </a>
-      <a class="nav-item">
-        <span class="label"><i class="fas fa-share-alt"></i>Share</span>
-      </a>
-      <a class="nav-item">
-        <span class="label"><i class="fas fa-images"></i>Gallery</span>
-      </a>
-      <a class="nav-item more">
-        <span class="label"><i class="fas fa-question-circle"></i>Help</span>
-      </a>
+      <a class="nav-item"><span class="label"><i class="fas fa-home"></i>Home</span></a>
+      <a class="nav-item"><span class="label"><i class="fas fa-share-alt"></i>Share</span></a>
+      <a class="nav-item"><span class="label"><i class="fas fa-images"></i>Gallery</span></a>
+      <a class="nav-item more"><span class="label"><i class="fas fa-question-circle"></i>Help</span></a>
       <a href="javascript:void(0);" class="nav-item trigram" onclick="navToggle()">&#9776;</a>
     </nav>
     <section class="slideshow">
       <div class="slideshow-wrap">
-        <div class="slide fade">
-          <img src="img2/cards/used/ireland.jpg"/>
-          <div class="captiontext">A beautiful view of it.</div>
+        <div class="slide">
+          <img src="img2/cards/used/closetoground.jpg"/>
+          <div class="captiontext">A bird's eye view.</div>
         </div>
-        <div class="slide fade">
+        <div class="slide">
           <img src="img2/cards/used/northernsky.jfif"/>
-          <div class="captiontext">The whole thing in all its glory.</div>
+          <div class="captiontext">Northern lights beauty.</div>
         </div>
-        <div class="slide fade">
+        <div class="slide">
           <img src="img2/cards/used/creepytwilight.jpg"/>
-          <div class="captiontext">Out at the edges of it.</div>
+          <div class="captiontext">Creepy is the new elegant.</div>
         </div>
-        <div class="slide fade">
+        <div class="slide">
           <img src="img2/cards/used/cottoncandy.jpg"/>
-          <div class="captiontext">Deep inside the heart of it.</div>
+          <div class="captiontext">Almost cotton candy, but not.</div>
         </div>
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
       </div>
       <br/>
       <div class="text-center">
-        <span class="dot" onclick="currentSlide(1)"><img src="https://picsum.photos/1280/448/?image=12"/></span>
-        <span class="dot" onclick="currentSlide(2)"><img src="https://picsum.photos/1280/448/?image=13"/></span>
-        <span class="dot" onclick="currentSlide(3)"><img src="https://picsum.photos/1280/448/?image=15"/></span>
-        <span class="dot" onclick="currentSlide(4)"><img src="https://picsum.photos/1280/448/?image=16"/></span>
+        <span class="dot" onclick="currentSlide(1)"><img src="img2/cards/used/closetoground.jpg"/></span>
+        <span class="dot" onclick="currentSlide(2)"><img src="img2/cards/used/northernsky.jfif"/></span>
+        <span class="dot" onclick="currentSlide(3)"><img src="img2/cards/used/creepytwilight.jpg"/></span>
+        <span class="dot" onclick="currentSlide(4)"><img src="img2/cards/used/cottoncandy.jpg"/></span>
       </div>
     </section>
     <article class="grid-container">
       <div class="card one">
-        <div class="thumb"></div><hr />
+        <div class="thumb"></div>
         <div class="card-content">
           <h3 class="card-title">Man's Best Friend</h3>
           <p class="card-text">Looking for a little guy to stand by your side no matter what, without the commitment of children? Good! Dogs are a man's best friend after all.</p>
-          <button data-modal="#09" class="card-more button">View</button>
+          <button data-modal="#09" class="card-more button">More</button>
         </div>
       </div><!--end .card -->
       <div id="09" class="modal">
@@ -76,11 +68,11 @@
   		  </div>
   		</div><!--end .modal-->
       <div class="card two">
-        <div class="thumb"></div><hr />
+        <div class="thumb"></div>
         <div class="card-content">
           <h3 class="card-title">Castle on the Hill</h3>
           <p class="card-text">Looking for a place to stay? Want something less motel-y and more Hogwarts? Well congrats, because you'll find everything you're looking for here.</p>
-          <button data-modal="#24" class="card-more button">View</button>
+          <button data-modal="#24" class="card-more button">More</button>
         </div>
       </div><!--end .card -->
       <div id="24" class="modal">
@@ -96,11 +88,11 @@
   		  </div>
   		</div><!--end .modal-->
       <div class="card three">
-        <div class="thumb"></div><hr />
+        <div class="thumb"></div>
         <div class="card-content">
           <h3 class="card-title">Stormy Night</h3>
           <p class="card-text">Worried about the weather ruining your trip? No worries. When you explore nature at its most pure, storms aren't so bad. You may even come to like them, like I do.</p>
-          <button data-modal="#35" class="card-more button">View</button>
+          <button data-modal="#35" class="card-more button">More</button>
         </div>
       </div><!--end .card -->
       <div id="35" class="modal">
@@ -108,7 +100,7 @@
   		    <span class="close">&times;</span>
   				<div class="modal-body">
             <img src="img2/cards/used/darkocean.jpg" alt="example" />
-  					<div class="eg-text">dot
+  					<div class="eg-text">
   						<h3>Stormy Night</h3>
   						<p>The fruits of many common cacti are covered in spines, so don't try to eat them . . .  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
   					</div>
@@ -116,11 +108,11 @@
   		  </div>
   		</div><!--end .modal-->
       <div class="card four">
-        <div class="thumb"></div><hr />
+        <div class="thumb"></div>
         <div class="card-content">
           <h3 class="card-title">Red Sea</h3>
           <p class="card-text">Who knew deserts could be so fun? Oh, right, I did. At this grand tour of the desert you'll ride a camel into the sunset, since that's really the only way to travel, isn't it?</p>
-          <button data-modal="#44" class="card-more button">View</button>
+          <button data-modal="#44" class="card-more button">More</button>
         </div>
       </div><!--end .card -->
       <div id="44" class="modal">
@@ -136,11 +128,11 @@
   		  </div>
   		</div><!--end .modal-->
       <div class="card five">
-        <div class="thumb"></div><hr />
+        <div class="thumb"></div>
         <div class="card-content">
           <h3 class="card-title">Beaches, Beaches, Beaches!</h3>
           <p class="card-text">Beaches are the favorite hang-out for people of all ages. It's no wonder why directors add beach scenes! Make sure to stop by one of your local beaches the next time you dream of the sand between your toes.</p>
-          <button data-modal="#54" class="card-more button">View</button>
+          <button data-modal="#54" class="card-more button">More</button>
         </div>
       </div><!--end .card -->
       <div id="54" class="modal">
@@ -156,11 +148,11 @@
   		  </div>
   		</div><!--end .modal-->
       <div class="card six">
-        <div class="thumb"></div><hr />
+        <div class="thumb"></div>
         <div class="card-content">
           <h3 class="card-title">First Date</h3>
           <p class="card-text">First date jitters? No worries, we all get them. If you're looking for the place to go, romantic nature getaways are the way to think. What girl wouldn't want to peruse something as beautiful as a lake?</p>
-          <button data-modal="#59" class="card-more button">View</button>
+          <button data-modal="#59" class="card-more button">More</button>
         </div>
       </div><!--end .card -->
       <div id="59" class="modal">
@@ -176,11 +168,11 @@
   		  </div>
   		</div><!--end .modal-->
       <div class="card seven">
-        <div class="thumb"></div><hr />
+        <div class="thumb"></div>
         <div class="card-content">
           <h3 class="card-title">But a Wee Trip</h3>
           <p class="card-text">Always wanted to travel but didn't know where? Stop searching, because Ireland has something for everyone. Most prominent is their large rocks and larger oceanside. Book the next flight to Europe and enjoy the peaceful serenity that is Ireland.</p>
-          <button data-modal="#71" class="card-more button">View</button>
+          <button data-modal="#71" class="card-more button">More</button>
         </div>
       </div><!--end .card -->
       <div id="71" class="modal">
@@ -196,11 +188,11 @@
   		  </div>
   		</div><!--end .modal-->
       <div class="card eight">
-        <div class="thumb"></div><hr />
+        <div class="thumb"></div>
         <div class="card-content">
           <h3 class="card-title">Ice Tree</h3>
           <p class="card-text">Winter truly is beautiful. The trees don't mind the cold, so why should you? Next time you're thinking of sipping cocoa by the fire, put the mug down and pick up a camera. These icicles won't stay forever!</p>
-          <button data-modal="#32" class="card-more button">View</button>
+          <button data-modal="#32" class="card-more button">More</button>
         </div>
       </div><!--end .card -->
       <div id="32" class="modal">
@@ -216,11 +208,11 @@
   		  </div>
   		</div><!--end .modal-->
       <div class="card nine">
-        <div class="thumb"></div><hr />
+        <div class="thumb"></div>
         <div class="card-content">
           <h3 class="card-title">Far As the Eye Can See</h3>
           <p class="card-text">Rivers and mountains and rocks, oh my! Long stretches of river while appreciating the mountainside is an activity <em>everyone</em> should partake in.</p>
-          <button data-modal="#19" class="card-more button">View</button>
+          <button data-modal="#19" class="card-more button">More</button>
         </div>
       </div><!--end .card -->
       <div id="19" class="modal">
@@ -236,11 +228,11 @@
   		  </div>
   		</div><!--end .modal-->
       <div class="card ten">
-        <div class="thumb"></div><hr />
+        <div class="thumb"></div>
         <div class="card-content">
           <h3 class="card-title">Hidden Waterfall</h3>
           <p class="card-text">You never know what you might find tucked away from humanity. A never-ending waterfall taller than Empire State is something everyone should see - at least once in their lifetime.</p>
-          <button data-modal="#06" class="card-more button">View</button>
+          <button data-modal="#06" class="card-more button">More</button>
         </div>
       </div><!--end .card -->
       <div id="06" class="modal">
@@ -256,11 +248,11 @@
   		  </div>
   		</div><!--end .modal-->
       <div class="card eleven">
-        <div class="thumb"></div><hr />
+        <div class="thumb"></div>
         <div class="card-content">
           <h3 class="card-title">Calmly Crashing</h3>
           <p class="card-text">Australia is the place to be. Combining the cool relaxing feeling of beaches while still having the excitement of danger, Australia takes nature to a whole new level.</p>
-          <button data-modal="#23" class="card-more button">View</button>
+          <button data-modal="#23" class="card-more button">More</button>
         </div>
       </div><!--end .card -->
       <div id="23" class="modal">
@@ -276,11 +268,11 @@
   		  </div>
   		</div><!--end .modal-->
       <div class="card twelve">
-        <div class="thumb"></div><hr />
+        <div class="thumb"></div>
         <div class="card-content">
           <h3 class="card-title">Just a Trickle</h3>
           <p class="card-text">The U.S. houses some of the most beautiful nature adventures in the world. Just as Arizona. You wouldn't suspect them to have once-in-a-lifetime sights, but boy do they ever.</p>
-          <button data-modal="#60" class="card-more button">View</button>
+          <button data-modal="#60" class="card-more button">More</button>
         </div>
       </div><!--end .card -->
       <div id="60" class="modal">
@@ -302,6 +294,6 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
 			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 			  crossorigin="anonymous"></script>
-    <script src="page.js" type="text/javascript"></script>
+    <script src="js/page.js" type="text/javascript"></script>
   </body>
 </html>

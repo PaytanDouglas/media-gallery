@@ -15,23 +15,22 @@ body {
   font-size: 18px;
   padding: .25rem;
 }
-i.fas {padding: 0 .3em;}
+i {padding: 0 .3em;}
 
 
 
 /* Nav */
 .topnav {
   align-content: center;
-  align-items: stretch;
   background-color: var(--independence);
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   margin-top: -.25rem;
   padding-bottom: .5rem;
-  position: fixed; /*-- makes the navbar stay at the top, even when scrolling--*/
+  position: fixed;
   width: 100%;
-  z-index: 1000; /*-- makes navbar always sit on top--*/
+  z-index: 1000;
 }
 a.nav-item {
   color: var(--aero);
@@ -40,16 +39,14 @@ a.nav-item {
   position: relative;
   text-align: center;
   top: 4px;
-  transition: color 250ms ease-in-out;
 }
 a.nav-item:hover {
   color: var(--canary);
   cursor: pointer;
 }
-.label {font-size: 1rem;}
 .nav-item.trigram {
   display: none;
-  font-size: 2rem;
+  font-size: 20pt;
   text-decoration: none;
 }
 
@@ -59,8 +56,7 @@ a.nav-item:hover {
   .topnav a.trigram {
     background: var(--independence);
     display: inherit;
-    font-size: 2em;
-    padding: .25em;
+    padding: .2em;
     position: absolute;
     right: 4%;
   }
@@ -68,14 +64,16 @@ a.nav-item:hover {
 @media screen and (max-width: 767px) {
   .topnav.responsive {align-items: center;}
   .topnav.responsive a, .topnav.responsive span {display:inherit;}
-  .topnav.responsive a:first-child {margin-top:1em;} /*-- adds space above first item --*/
-  .topnav.responsive a:not(:last-child) {display:inherit; padding-top:1em;} /*-- makes items visible (but not the trigram) and adds space above them--*/
-  .topnav.responsive a.more {margin-bottom: 1em;} /*-- adds margin below bottom item --*/
-  .topnav.responsive a.trigram {visibility:hidden; transition:none;} /*-- hides trigram when open --*/
+  .topnav.responsive a:not(:last-child) {display:inherit; padding-top:1em;}
+  .topnav.responsive a.trigram {visibility:hidden;}
   .topnav.responsive a.trigram:after {content:'\000D7'; visibility:visible; text-indent: -.5em;} /*-- replaces trigram sign with x-sign on mobile. --*/
 }
 @media screen and (min-width: 768px) {
-  .topnav {display: flex; flex-direction: row; justify-content: space-around;}
+  .topnav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
 }
 
 
@@ -92,35 +90,25 @@ a.nav-item:hover {
 }
 .slideshow-wrap img {width: 100%;}
 .prev, .next {
-  border-radius: 0 3px 3px 0; /*-- slightly rounds inside borders --*/
-  color: white;
+  color: var(--whitesmoke);
   cursor: pointer;
   font-weight: bold;
   font-size: 18px;
-  margin-top: -22px; /*-- adjusts position by height of arrows --*/
   padding: 16px;
   position: absolute;
-  top: 50%; /*-- positions arrows half the height of parent from top --*/
-  transition: 0.3s ease;
-  user-select: none; /*-- prevents users from selecting buttons --*/
+  top: 50%;
   width: auto;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
 }
-.next {
-  border-radius: 3px 0 0 3px;
-  right: 0;
-}
+.next {right: 0;}
 .prev:hover, .next:hover {background-color: var(--transparent);}
 .text-center {text-align: center;}
 .captiontext {
-  background: var(--transparent);
-  bottom: 8px; /*-- sets position 8px from bottom --*/
-  color: #f2f2f2;
+  background: var(--independence);
+  bottom: 0;
+  color: var(--canary);
   font-size: 22px;
-  padding: 8px 12px; /*-- sets caption padding --*/
-  position: absolute; /*-- positions caption text absolutely--*/
+  padding: 5px;
+  position: absolute;
   text-align: center;
   width: 100%;
 }
@@ -128,32 +116,11 @@ a.nav-item:hover {
   cursor:pointer;
   display: inline-block;
   height: auto;
-  margin: 0 2px;
   opacity: .5;
-  transition: all 100ms ease-in-out;
   width: 20%;
 }
 .dot img {width: 100% !important;}
 .active, .dot:hover {opacity: 1;}
-
-
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade; /*-- webkit prefix  --*/
-  -webkit-animation-duration: 1.5s; /*-- webkit prefix --*/
-  animation-name: fade; /*-- defines which animation to use --*/
-  animation-duration: 1.5s; /*-- sets the duration --*/
-}
-@-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-@keyframes fade { /*-- sets "fade" animation properties --*/
-  from {opacity: .4} /*-- sets start of animation --*/
-  to {opacity: 1} /*-- sets end of animation --*/
-}
-@media only screen and (max-width: 767px) {.slideshow {display: none;}}
 
 
 
@@ -165,7 +132,6 @@ a.nav-item:hover {
   margin-top: 2rem;
   padding: 1rem;
 }
-
 /* Grid for Small Screens */
 @media screen and (min-width: 550px) {.grid-container {grid-template-columns: repeat(2, 1fr);}}
 @media screen and (min-width: 768px) {.grid-container {grid-template-columns: repeat(3, 1fr);}}
@@ -228,7 +194,6 @@ button.card-more {
 button.card-more, button.card-more:visited {
   border: 1.5px solid var(--blackolive);
   color: var(--canary);
-  transition: all 50ms ease-in-out;
 }
 button.card-more:hover, button.card-more:active {
   border-color: var(--electricblue);
@@ -239,7 +204,7 @@ button.card-more:hover, button.card-more:active {
 
 /* Modal */
 .modal {
-  background-color: rgba(10, 10, 10, .4);
+  background-color: var(--transparent);
   display: none;
   left: 0;
   height: 100%;
@@ -256,40 +221,32 @@ button.card-more:hover, button.card-more:active {
   padding: 1em;
   width: 75%;
 }
-@keyframes fadein {from{transform:scale(.1);} /* modal grows from small to full size */}
 .close {
-   color: var(--independence);
-   font-size: 3em;
-   font-weight: bold;
-   position: absolute;
-   top: 5px;
-   right: 15%;
-   transition: all .2s ease-in;
-   text-shadow: 2px 2px 2px var(--whitesmoke),
-               -2px -2px 2px var(--whitesmoke),
-               2px -2px 2px var(--whitesmoke),
-               -2px 2px 2px var(--whitesmoke);
+  background-color: var(--canary);
+  color: var(--independence);
+  font-size: 3em;
+  font-weight: bold;
+  position: absolute;
+  top: 5px;
+  right: 15%;
 }
 .close:hover, .close:focus {
+  background-color: var(--independence);
    color: var(--electricblue);
    text-decoration: none;
    cursor: pointer;
-   text-shadow: 2px 2px 2px var(--blackolive),
-               -2px -2px 2px var(--blackolive),
-               2px -2px 2px var(--blackolive),
-               -2px 2px 2px var(--blackolive);
 }
 .modal-body {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 2em;
 }
-.eg-text {align-self: center;}
 .modal-body img {
   width: 100%;
   height: auto;
 }
 @media screen and (min-width: 1280px) {.modal-body {grid-template-columns: 7fr 5fr;}}
+
 
 
 /* Footer */
