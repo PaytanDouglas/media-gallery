@@ -33,6 +33,8 @@ i {padding: 0 .3em;}
   z-index: 1000;
 }
 a.nav-item {
+  border-left: var(--independence) 2px solid;
+  border-right: var(--independence) 2px solid;
   color: var(--aero);
   margin: auto;
   padding: 1em;
@@ -41,6 +43,8 @@ a.nav-item {
   top: 4px;
 }
 a.nav-item:hover {
+  border-left: var(--cottoncandy) 2px solid;
+  border-right: var(--cottoncandy) 2px solid;
   color: var(--canary);
   cursor: pointer;
 }
@@ -55,6 +59,9 @@ a.nav-item:hover {
   .topnav a, .topnav span {display: none;}
   .topnav a.trigram {
     background: var(--independence);
+    border: 1px solid var(--independence);
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
     display: inherit;
     padding: .2em;
     position: absolute;
@@ -66,7 +73,13 @@ a.nav-item:hover {
   .topnav.responsive a, .topnav.responsive span {display:inherit;}
   .topnav.responsive a:not(:last-child) {display:inherit; padding-top:1em;}
   .topnav.responsive a.trigram {visibility:hidden;}
-  .topnav.responsive a.trigram:after {content:'\000D7'; visibility:visible; text-indent: -.5em;} /*-- replaces trigram sign with x-sign on mobile. --*/
+  .topnav.responsive a.trigram:after {
+    content:'\000D7';
+    text-indent: -.5em;
+    transition: all .6s ease-in;
+    visibility: visible;
+  } /*-- replaces trigram sign with x-sign on mobile. --*/
+  .topnav.responsive a.trigram:hover {transform: scale(2) translate(-2px, -2px);}
 }
 @media screen and (min-width: 768px) {
   .topnav {
@@ -145,6 +158,7 @@ a.nav-item:hover {
   background-color: var(--aero);
   border-radius: 4px;
   padding: .5em;
+  transition: all .3s ease-in-out;
 }
 .thumb {
   background-position: center center;
@@ -152,18 +166,18 @@ a.nav-item:hover {
   border-radius: 4px;
   padding-bottom: 56%; /*-- creates ~16:9 ratio--*/
 }
-.one .thumb {background-image: url("img2/cards/used/boywdog.jpg");}
-.two .thumb {background-image: url("img2/cards/used/hogwarts.jpg");}
-.three .thumb {background-image: url("img2/cards/used/darkocean.jpg");}
-.four .thumb {background-image: url("img2/cards/used/desert.jpg");}
-.five .thumb {background-image: url("img2/cards/used/h20.jpg");}
-.six .thumb {background-image: url("img2/cards/used/girlonlake.jpg");}
-.seven .thumb {background-image: url("img2/cards/used/howtotrainyourdragon.jpg");}
-.eight .thumb {background-image: url("img2/cards/used/icetree.jpg");}
-.nine .thumb {background-image: url("img2/cards/used/riverraveign.jpg");}
-.ten .thumb {background-image: url("img2/cards/used/waterfallrainbow.jpg");}
-.eleven .thumb {background-image: url("img2/cards/used/wavescrashing.jpg");}
-.twelve .thumb {background-image: url("img2/cards/used/watertrickle.jfif");}
+.one .thumb {background-image: url("../img2/cards/used/boywdog.jpg");}
+.two .thumb {background-image: url("../img2/cards/used/hogwarts.jpg");}
+.three .thumb {background-image: url("../img2/cards/used/darkocean.jpg");}
+.four .thumb {background-image: url("../img2/cards/used/desert.jpg");}
+.five .thumb {background-image: url("../img2/cards/used/h20.jpg");}
+.six .thumb {background-image: url("../img2/cards/used/girlonlake.jpg");}
+.seven .thumb {background-image: url("../img2/cards/used/howtotrainyourdragon.jpg");}
+.eight .thumb {background-image: url("../img2/cards/used/icetree.jpg");}
+.nine .thumb {background-image: url("../img2/cards/used/riverraveign.jpg");}
+.ten .thumb {background-image: url("../img2/cards/used/waterfallrainbow.jpg");}
+.eleven .thumb {background-image: url("../img2/cards/used/wavescrashing.jpg");}
+.twelve .thumb {background-image: url("../img2/cards/used/watertrickle.jfif");}
 
 .card-content {
   align-items: center;
@@ -182,6 +196,9 @@ a.nav-item:hover {
   font-size: .75em;
   line-height: 1.2;
 }
+button {
+  transition: all .3s ease-in;
+}
 button.card-more {
   background: var(--independence);
   border-radius: 50px;
@@ -199,7 +216,13 @@ button.card-more:hover, button.card-more:active {
   border-color: var(--electricblue);
   color: var(--electricblue);
 }
-
+button.card-more:hover {
+  transform: scale(1.25);
+}
+.card:hover {
+  border: 3px solid var(--independence);
+  transform: scale(1.05);
+}
 
 
 /* Modal */
@@ -232,9 +255,9 @@ button.card-more:hover, button.card-more:active {
 }
 .close:hover, .close:focus {
   background-color: var(--independence);
-   color: var(--electricblue);
-   text-decoration: none;
-   cursor: pointer;
+  color: var(--electricblue);
+  text-decoration: none;
+  cursor: pointer;
 }
 .modal-body {
   display: grid;
